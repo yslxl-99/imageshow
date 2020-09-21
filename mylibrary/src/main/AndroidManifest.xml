@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.imageshow">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取SD卡的权限:打开相册选取图片所必须的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application>
+        <activity android:name=".ImageShowActivity">
+            <!--使这个activity暴露出来-->
+            <!--intent-filter过滤-->
+            <intent-filter>
+                <!--暴露类的标记，名字-->
+                <action android:name="imgeshowactivity"></action>
+                <!--暴露类的类别,这个是默认的意思-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--用来匹配 Intent 中的 Data Uri -->
+                <!--<data/>-->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
